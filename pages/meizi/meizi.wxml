@@ -1,0 +1,14 @@
+<custom_nav navTitle="妹子秀图" leftNavImage="../../icons/back.png" />
+
+<view class='page'>
+  <refreshView class="scorllStyle" bind:onPullRefresh='refresh' needLoadMore bind:onLoadMore='loadmore'>
+    <view class='imageWrapper'>
+      <view wx:for="{{list}}" wx:key="{{index}}" wx:if="{{index%2==0}}">
+        <image class='img' src='{{item.url}}' mode='widthFix' bindtap="clickImage" data-current="{{item}}" />
+      </view>
+      <view wx:for="{{list}}" wx:key="{{index}}" wx:if="{{index%2!=0}}">
+        <image class='img' src='{{item.url}}' mode='widthFix' bindtap="clickImage" data-current="{{item}}"/>
+      </view>
+    </view>
+  </refreshView>
+</view>

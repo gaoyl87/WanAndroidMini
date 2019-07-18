@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-collapse": "../../components/youzan/collapse/index",
+    "van-collapse-item": "../../components/youzan/collapse-item/index"
+  }
+}

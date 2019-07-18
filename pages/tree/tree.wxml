@@ -1,0 +1,8 @@
+<custom_nav navTitle="体系" leftNavImage="" />
+<view class="page">
+  <van-collapse value="{{activeIndex}}" accordion bind:change="onChange">
+    <van-collapse-item wx:for="{{treeList}}" wx:key="{{index}}" title-class="title-class" content-class="content-class" title="{{index + 1}}. {{item.name}}">
+      <view class="chapter mainThemeBgColor" wx:for="{{item.children}}" wx:key="{{index}}" data-id='{{item.id}}' data-name='{{item.name}}' bindtap='clickChapter'>{{item.name}}</view>
+    </van-collapse-item>
+  </van-collapse>
+</view>

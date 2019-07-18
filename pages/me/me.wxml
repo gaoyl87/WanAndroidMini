@@ -1,0 +1,38 @@
+<view class="bg-wrapper" bindtap='clickBg'>
+  <image src="../../icons/me_banner.jpg" class="bg-image"></image>
+  <view class='bg-inner-wrapper'>
+    <image src="{{ isLogin == true ? '../../icons/logo_login.png' : '../../icons/logo_logout.png'}}" class="logo" />
+    <text wx:if="{{isLogin}}" style='color:#fff;'>{{username}}</text>
+    <text wx:else style='color:#a0a0a0;'>点击登录</text>
+  </view>
+
+  <image src="../../icons/wave.gif" class="gif-wave"></image>
+</view>
+<view class='page'>
+  <view class='item' bindtap='clickItem' data-item-type='collect'>
+    <image class='item-img' src='../../icons/ic_collect.png'></image>
+    <text class='item-name mainFontColor' style='flex:1;'>我的收藏</text>
+    <image class="arrow item-img" src='../../icons/arrow_down.png' />
+  </view>
+  <view class='line'></view>
+
+  <view class='item' bindtap='clickItem' data-item-type='meizi'>
+    <image class='item-img' src='../../icons/ic_relax.png'></image>
+    <text class='item-name mainFontColor' style='flex:1;'>妹子秀图</text>
+    <image class="arrow item-img" src='../../icons/arrow_down.png' />
+  </view>
+  <view class='line'></view>
+
+  <view class='item' bindtap='clickItem' data-item-type='github'>
+    <image class='item-img' src='../../icons/ic_author.png'></image>
+    <text class='item-name mainFontColor' style='flex:1;'>项目地址</text>
+    <image class="arrow item-img" src='../../icons/arrow_down.png' />
+  </view>
+  <view class='line'></view>
+
+  <text class='logout' wx:if="{{isLogin}}" bindtap='clickLogout'>退出登录</text>
+
+  <view class='about-wrapper'>
+    <text decode>玩安卓&nbsp;v1.0&nbsp;&nbsp;by&nbsp;YeeLong</text>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+<view>
+  <view class="mainThemeBgColor navWrapper" style="height:{{navHeight}}px;">
+    <view style="height:{{statusBarHeight}}px;"></view>
+    <view class="title-bar" style="height:{{navHeight-statusBarHeight}}px;">
+      <view class="div">
+        <image class="left_icon" bindtap='_clickLeft' src="{{leftNavImage}}" mode="widthFix" />
+      </view>
+      <text class="title">{{navTitle}}</text>
+      <view class="div"></view>
+    </view>
+  </view>
+  <!-- 放一个空白view充当导航栏 -->
+  <view style="height:{{navHeight}}px;" />
+</view>

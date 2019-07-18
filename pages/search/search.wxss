@@ -1,0 +1,57 @@
+@import "../../less/global.wxss";
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  color: #666;
+  padding: 20rpx;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.input {
+  padding: 10rpx;
+  font-size: 32rpx;
+}
+
+.inputPlaceHolder {
+  color: #ccc;
+}
+
+.confirmBtn {
+  position:absolute;
+  z-index: 999;
+  right: 10rpx;
+  bottom: 10rpx;
+  border-radius: 40rpx;
+  padding: 10rpx 20rpx;
+  min-width: 100rpx;
+  font-size: 32rpx;
+  color: white;
+  align-content: center;
+}
+
+.hotWordInfo{
+  margin-top: 40rpx;
+  font-size: 32rpx;
+}
+
+.hotWordWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hotWord {
+  border-radius: 40rpx;
+  padding: 10rpx 20rpx;
+  min-width: 100rpx;
+  font-size: 32rpx;
+  color: white;
+  align-content: center;
+  text-align: center;
+  margin-right: 40rpx;
+  margin-top: 20rpx;
+}

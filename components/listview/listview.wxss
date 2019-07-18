@@ -1,0 +1,59 @@
+@import "../../less/global.wxss";
+
+.listviewWrapper {
+  width: 100%;
+  border-radius: 15rpx;
+  border: 5rpx solid #9370db;
+  padding: 10rpx 15rpx;
+  margin-bottom: 20rpx;
+}
+
+.itemTopWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.itemTopWrapper text {
+  font-size: 28rpx;
+}
+
+.itemTitle {
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+  font-size: 32rpx;
+  word-break: break-all;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.itemBottomWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rpx;
+}
+
+.collectImage {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.itemBottomWrapper text {
+  font-size: 28rpx;
+}
+
+.itemBottomLeftWapper {
+  display:flex;
+  align-items: center;
+}
+
+.itemBottomLeftWapper text {
+  padding: 5rpx 40rpx;
+  font-size: 28rpx;
+  color:#fff;
+  text-align: center;
+  border-radius: 40rpx;
+}

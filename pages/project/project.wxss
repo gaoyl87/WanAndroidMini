@@ -1,0 +1,106 @@
+@import "../../less/global.wxss";
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  color: #666;
+  padding: 0 10rpx;
+}
+
+.nav_wrap {
+  height: 100rpx;
+}
+
+.nav_scroll_view {
+  background-color: #fff;
+  position: fixed;
+  z-index: 999;
+  white-space: nowrap;
+}
+
+.nav_item {
+  display: inline-block;
+  font-size: 30rpx;
+  transition: color 0.3s ease;
+  padding: 20rpx 45rpx;
+}
+
+.line {
+    height: 5rpx;
+}
+
+.scorllStyle {
+}
+
+
+.listviewWrapper {
+  width: 100%;
+  border-radius: 15rpx;
+  border: 5rpx solid #9370db;
+  padding:15rpx;
+  margin-bottom: 20rpx;
+}
+
+.itemTopWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.itemTopWrapper text {
+  font-size: 28rpx;
+}
+
+.item-main-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 400rpx;
+}
+
+.item-main-wrapper image {
+  width: 30%;
+  height: 100%;
+  border-radius: 15rpx;
+  margin-right: 20rpx;
+}
+
+.item-main-text-wrapper {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.itemTitle {
+  margin-bottom: 20rpx;
+  font-size: 36rpx;
+  word-break: break-all;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.itemDesc {
+  font-size: 32rpx;
+  word-break: break-all;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.itemTab {
+  font-size: 28rpx;
+  word-break: break-all;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

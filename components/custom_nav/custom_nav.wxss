@@ -1,0 +1,34 @@
+@import "../../less/global.wxss";
+
+.navWrapper {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+.title-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-bar text {
+  color: white;
+}
+
+.title-bar .title {
+  font-size: 32rpx;
+}
+
+.title-bar .div {
+  flex: 2;
+  display:flex;
+  align-items: center;
+  padding: 0 20rpx;
+}
+
+.left_icon {
+    width: 40rpx;
+    height: 40rpx;
+}

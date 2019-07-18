@@ -1,0 +1,10 @@
+<custom_nav navTitle="注册" leftNavImage="../../icons/back.png" />
+<view class='login'>
+  <input class="input" style="border-bottom:1px solid {{usernameInputColor}};caret-color:{{usernameInputColor}};color:{{usernameInputColor}}" placeholder="请输入用户名" placeholder-class='inputPlaceHolder' bindinput="inputing" data-type='username' bindfocus="inputFocus"
+    bindblur="inputBlur" maxlength="20" />
+  <input class="input" style="border-bottom:1px solid {{passwordInputColor}};caret-color:{{passwordInputColor}};color:{{passwordInputColor}}" placeholder="请输入密码" placeholder-class='inputPlaceHolder' password bindinput="inputing" data-type='password' bindfocus="inputFocus"
+    bindblur="inputBlur" maxlength="20" />
+  <input class="input" style="border-bottom:1px solid {{passwordInputColor2}};caret-color:{{passwordInputColor2}};color:{{passwordInputColor2}}" placeholder="请确认密码" placeholder-class='inputPlaceHolder' password bindinput="inputing" data-type='password2'
+    bindfocus="inputFocus" bindblur="inputBlur" maxlength="20" />
+  <view class='login-btn mainThemeBgColor' bindtap='register'>注册</view>
+</view>

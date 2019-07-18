@@ -1,0 +1,6 @@
+<custom_nav navTitle="我的收藏" leftNavImage="../../icons/back.png" />
+<view class="page">
+  <refreshView class="scorllStyle" bind:onPullRefresh='refresh' needLoadMore bind:onLoadMore='loadmore'>
+      <listview itemData="{{collectArticleList}}" hideCollectImage="{{true}}" bind:itemClick="itemClick" />
+  </refreshView>
+</view>

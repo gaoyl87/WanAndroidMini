@@ -1,0 +1,12 @@
+.mainThemeBgColor {
+  background-color: #9370DB;
+}
+.mainThemeFontColor {
+  color: #9370db;
+}
+.mainFontColor {
+  color: #333;
+}
+.secondaryFontColor {
+  color: #aaa;
+}

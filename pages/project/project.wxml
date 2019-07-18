@@ -1,0 +1,32 @@
+<custom_nav navTitle="{{navTitle}}" leftNavImage="" />
+<view class='page'>
+  <!-- 首页导航 -->
+  <view class="nav_wrap">
+    <!-- 自己滚动区域的组件 -->
+    <scroll-view class="nav_scroll_view" bindscroll="navScroll" scroll-x scroll-with-animation enable-back-to-top>
+      <rich-text id="nav{{index}}" bindtap="clickTab" class="nav_item {{index===currentNavIndex?'mainThemeFontColor':'mainFontColor'}}" wx:for="{{navList}}" wx:key="{{index}}" data-index='{{index}}' nodes="{{item.name}}" />
+      <!-- 下划线width值是动态赋值 -->
+      <view class="line mainThemeBgColor" style="width:{{lineWidth}}px;" animation="{{navAnimate}}" />
+    </scroll-view>
+  </view>
+
+  <refreshView class="scorllStyle" bind:onPullRefresh='refresh' needLoadMore bind:onLoadMore='loadmore'>
+    <view class="listviewWrapper" wx:for="{{projectList}}" wx:key="{{index}}" bindtap='itemClick' data-title="{{item.title}}" data-url="{{item.link}}">
+      <view class="item-main-wrapper">
+        <image src="{{item.envelopePic}}" mode="scaleToFill"></image>
+
+        <view class="item-main-text-wrapper">
+          <view>
+            <rich-text class="itemTitle mainThemeFontColor" nodes="{{item.title}}" />
+            <rich-text class="itemDesc mainFontColor" nodes="{{item.desc}}" />
+          </view>
+          <view>
+            <text class="itemTab secondaryFontColor">{{item.author}}</text>
+            <text class="itemTab secondaryFontColor">{{item.superChapterName}} / {{item.chapterName}}</text>
+            <text class="itemTab secondaryFontColor">{{item.niceDate}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </refreshView>
+</view>

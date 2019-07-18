@@ -1,0 +1,119 @@
+@import "../../less/global.wxss";
+
+.bg-wrapper {
+  height: 550rpx;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 99%;
+}
+
+.bg-inner-wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-inner-wrapper .logo {
+  width: 160rpx;
+  height: 120rpx;
+}
+
+.bg-inner-wrapper text {
+  margin-top: 40rpx;
+  font-size: 32rpx;
+}
+
+.gif-wave {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  mix-blend-mode: screen;
+  height: 100rpx;
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  color: #666;
+  padding: 0 10rpx;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 0 30rpx;
+  height: 100rpx;
+}
+
+.arrow {
+  transform: rotate(-90deg);
+}
+
+.item-img {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.item-name {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  margin-left: 20rpx;
+}
+
+.line {
+  border: 1rpx solid #eee;
+  height: 1rpx;
+  margin-left: 80rpx;
+  margin-right: 40rpx;
+}
+
+.logout {
+  display: block;
+  width: 360rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border: 1px solid hsl(6, 93%, 71%);
+  border-radius: 20rpx;
+  font-size: 32rpx;
+  text-align: center;
+  color:salmon;
+  position: absolute;
+  left: 50%;
+  bottom: 160rpx;
+  margin-left:-180rpx;
+}
+
+.about-wrapper {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  bottom: 30rpx;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-wrapper text {
+  opacity: 0.8;
+  color: #999;
+  font-weight: 200;
+  font-size: 26rpx;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,15 @@
+<view class="listviewWrapper" wx:for="{{itemData}}" wx:key="{{index}}" bindtap='itemClick' data-item="{{item}}" data-index="{{index}}">
+  <view class="itemTopWrapper">
+    <text class="mainThemeFontColor">{{item.author}}</text>
+    <text class="mainThemeFontColor">{{item.superChapterName}} / {{item.chapterName}}</text>
+  </view>
+  <rich-text class="itemTitle mainFontColor" nodes="{{item.title}}" />
+  <view class="itemBottomWrapper">
+    <view class="itemBottomLeftWapper">
+      <image class="collectImage" hidden='{{hideCollectImage}}' src="{{isLogin && item.collect ? '../../icons/collected.png' : '../../icons/uncollected.png'}}" style='width:40rpx;height:40rpx;margin-right:10rpx;' catchtap='clickCollect' data-item="{{item}}" data-index="{{index}}"/>
+      <text class="mainThemeBgColor" wx:for="{{tabData}}" wx:key="{{index}}">{{item}}</text>
+    </view>
+
+    <text class="itemBottom secondaryFontColor">{{item.niceDate}}</text>
+  </view>
+</view>

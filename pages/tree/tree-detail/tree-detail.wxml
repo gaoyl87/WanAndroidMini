@@ -1,0 +1,6 @@
+<custom_nav navTitle="{{title}}" leftNavImage="../../icons/back.png" />
+<view class="page">
+  <refreshView class="scorllStyle" bind:onPullRefresh='refresh' needLoadMore bind:onLoadMore='loadmore'>
+      <listview itemData="{{articleList}}" bind:itemClick="itemClick" />
+  </refreshView>
+</view>

@@ -1,0 +1,114 @@
+@import "../../less/global.wxss";
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  color: #666;
+  padding: 10rpx;
+}
+
+.scorllStyle {
+  width: 100%;
+  height: 100%;
+}
+
+.bannerWrapper {
+  width: 100%;
+  position: relative;
+}
+
+.banner {
+  width: 100%;
+  height: 320rpx;
+}
+
+.banner image {
+  width: 100%;
+  height: 100%;
+  border-radius: 30rpx;
+	transform: scale(0.85)  ;
+	transition: all 0.2s ease-in 0s ;
+}
+
+.banner image.cur {
+  transform: none ;
+	transition: all 0.2s ease-in 0 ;
+}
+
+/*用来包裹所有的小圆点  */
+
+.dotWrapper {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  bottom: 20rpx;
+  justify-content: center;
+}
+
+/*未选中时的小圆点样式 */
+
+.dot {
+  width: 32rpx;
+  height: 12rpx;
+  margin-right: 26rpx;
+  opacity: 0.3;
+}
+
+/*选中以后的小圆点样式  */
+
+.dotActive {
+  opacity: 1;
+}
+
+.dotTextWrapper {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 5rpx 20rpx;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  justify-content: space-between;
+  font-size: 24rpx;
+}
+
+.dotText {
+  font-size: 28rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.nav_wrap {
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  align-items: center;
+}
+
+.nav_wrap.fixed {
+  position: fixed;
+  z-index: 999;
+  background-color: #fff;
+}
+
+.nav_item {
+  height: 80rpx;
+  flex: 1;
+  font-size: 30rpx;
+  transition: color 0.3s ease;
+  padding: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_item.active {
+  color: #fff;
+  border-radius: 15rpx;
+}

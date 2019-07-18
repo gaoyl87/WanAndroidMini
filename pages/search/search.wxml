@@ -1,0 +1,21 @@
+<custom_nav navTitle="搜索" leftNavImage="../../icons/back.png" />
+<view class="page">
+  <view class="inputWrapper">
+    <input class="input" style="border-bottom:1px solid {{inputColor}};caret-color:{{inputColor}};color:{{inputColor}}" placeholder="请输入搜索关键词" placeholder-class='inputPlaceHolder' bindinput="inputing" bindfocus="inputFocus" bindblur="inputBlur" maxlength="40"/>
+    <view hidden='{{input == ""}}' class="confirmBtn mainThemeBgColor" bindtap='clickSearch'>搜索</view>
+  </view>
+
+  <view hidden='{{hotWords.length === 0}}'>
+    <view class="hotWordInfo mainFontColor">大家都在搜</view>
+    <view class="hotWordWrapper">
+      <view class="hotWord mainThemeBgColor" wx:for="{{hotWords}}" wx:key="{{index}}" bindtap='clickHotWord' data-name='{{item}}'>{{item}}</view>
+    </view>
+  </view>
+
+  <view hidden='{{historyWords.length === 0}}'>
+    <view class="hotWordInfo mainFontColor">搜索历史</view>
+    <view class="hotWordWrapper">
+      <view class="hotWord mainThemeBgColor" wx:for="{{historyWords}}" wx:key="{{index}}" bindtap='clickHotWord' data-name='{{item}}'>{{item}}</view>
+    </view>
+  </view>
+</view>

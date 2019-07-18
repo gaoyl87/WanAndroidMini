@@ -1,0 +1,66 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/test/index",
+    "pages/search/search",
+    "pages/tree/tree",
+    "pages/me/me",
+    "pages/project/project",
+    "pages/web/web",
+    "pages/search/search-result/search-result",
+    "pages/tree/tree-detail/tree-detail",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/my-collect/my-collect",
+    "pages/meizi/meizi"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#9370DB",
+    "navigationBarTitleText": "WanAndroid",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#fff",
+    "backgroundColorTop": "#fff",
+    "backgroundColorBottom": "#fff",
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {
+    "custom_nav": "../../components/custom_nav/custom_nav",
+    "refreshView": "../../../components/pullScrollView/pullScrollView",
+    "listview": "../../../components/listview/listview"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#aaa",
+    "selectedColor": "#9370DB",
+    "backgroundColor": "#fff",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "icons/home_unselected.png",
+        "selectedIconPath": "icons/home_selected.png"
+      },
+      {
+        "pagePath": "pages/tree/tree",
+        "text": "体系",
+        "iconPath": "icons/tree_unselected.png",
+        "selectedIconPath": "icons/tree_selected.png"
+      },
+      {
+        "pagePath": "pages/project/project",
+        "text": "项目",
+        "iconPath": "icons/project_unselected.png",
+        "selectedIconPath": "icons/project_selected.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "icons/me_unselected.png",
+        "selectedIconPath": "icons/me_selected.png"
+      }
+    ]
+  }
+}

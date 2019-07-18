@@ -1,0 +1,39 @@
+<custom_nav navTitle="{{navTitle}}" leftNavImage="../../icons/search.png" bind:clickLeft="doClickLeft" />
+<view class="page">
+  <refreshView class="scorllStyle" bind:onScroll='_onScroll' bind:onPullRefresh='_refresh' needLoadMore bind:onLoadMore='_loadMore' scrollTop="{{scrollTop}}">
+    <view class="bannerWrapper">
+      <swiper id='banner' class="banner" autoplay circular interval="{{2000}}" duration="{{1000}}" previous-margin="80rpx" next-margin="80rpx"  bindchange="bannerChange">
+        <swiper-item wx:for="{{bannerList}}" wx:key="{{index}}" bindtap="clickBannerItem" data-item="{{item}}" >
+          <image src="{{item.imagePath}}" class="{{currentBannerIndex==index?'cur':''}}" />
+          <view class="dotTextWrapper mainThemeBgColor" wx:if="{{!showBannerDot && index === currentBannerIndex}}">
+            <text class="mainFontColor dotText">{{item.title}}</text>
+            <text class="mainFontColor dotText">{{index + 1}} / {{bannerList.length}}</text>
+          </view>
+        </swiper-item>
+      </swiper>
+      <!-- 自定义小圆点的样式 -->
+      <view class="dotWrapper" wx:if="{{showBannerDot}}">
+        <view class="dot mainThemeBgColor {{index === currentBannerIndex ? 'dotActive' : ''}}" wx:for="{{bannerList}}" wx:key="{{index}}" />
+      </view>
+    </view>
+
+    <!-- tab布局 -->
+    <view class="nav_wrap {{isNavFixed ? 'fixed':''}}" style='top:{{isNavFixed? navTop : 0}}px;' id="nav_wrap">
+      <text id="nav{{index}}" bindtap="clickTab" class="nav_item {{index===currentNavIndex?'mainThemeBgColor active':'mainFontColor'}} " wx:for="{{navList}}" wx:key="{{index}}" data-index="{{index}}">{{item}}
+      </text>
+    </view>
+    <view wx:if="{{isNavFixed}}" class='nav_wrap' />
+
+    <block wx:if="{{currentNavIndex===0}}">
+      <!-- 置顶文章列表 -->
+      <listview itemData="{{topArticleList}}" tabData="{{['置顶']}}" bind:itemClick="itemClick" />
+      <!-- 最新文章列表 -->
+      <listview itemData="{{newestArticleList}}" bind:itemClick="itemClick" />
+    </block>
+    <block wx:elif="{{currentNavIndex===1}}">
+      <!-- 最新项目列表 -->
+      <listview itemData="{{newestProjectList}}" bind:itemClick="itemClick" />
+    </block>
+
+  </refreshView>
+</view>
