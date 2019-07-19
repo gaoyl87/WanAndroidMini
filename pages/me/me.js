@@ -67,7 +67,19 @@ Page({
     })
   },
 
-  gotoGithub() {},
+  gotoGithub() {
+    wx.setClipboardData({
+      data: 'https://github.com/13588823551/WanAndroidMini',
+      success(res) {
+        app.gotoWeb('https://github.com/13588823551/WanAndroidMini', "WanAndroidMini")
+        wx.showToast({
+          title: '项目地址已复制',
+          icon: 'none'
+        })
+      }
+    })
+    app.gotoWeb('https://github.com/13588823551/WanAndroidMini', "WanAndroidMini")
+  },
 
   clickLogout() {
     const that = this
